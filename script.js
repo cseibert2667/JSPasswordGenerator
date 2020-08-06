@@ -6,10 +6,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-// Function to pull a random value from a given string
-function getRandomValue(str) {
-  return str[Math.floor(Math.random() * str.length)];
-}
+
 function generatePassword() {
   // character sets
   var lower = "abcdefghijklmnopqrstuvwxyz";
@@ -49,6 +46,12 @@ function generatePassword() {
   // Shuffles the end result (see declared function below)
   return shuffle(result);
 }
+
+// Function to pull a random value from a given string
+function getRandomValue(str) {
+  return str[Math.floor(Math.random() * str.length)];
+}
+
 // Function for shuffling a string
 function shuffle(str) {
   var shuffled = "";
@@ -58,6 +61,7 @@ function shuffle(str) {
   }
   return shuffled;
 }
+
 // Function for generating a random index to pass into the .splice above
 function getIndex(str) {
   for (let i = 0; i < str.length; i++) {
