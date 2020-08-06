@@ -43,18 +43,26 @@ function generatePassword() {
       result += getRandomValue(num);
     }
   }
-  // Return the result, cut it down to a substring that is the proper length, and shuffle it
+  // Return the result, cut it down to a substring that is the proper length
   result = result.substring(0, length);
+  // Shuffles the end result (see declared function below)
   return shuffle(result);
 }
-
-function shuffle(str){
+// Function for shuffling a string
+function shuffle(str) {
   var shuffled = "";
   str = str.split("");
   while (str.length > 0) {
-    shuffled +=  str.splice(str.length * Math.random() << 0, 1);
+    shuffled += str.splice(getIndex(str), 1);
   }
   return shuffled;
+}
+// Function for generating a random index to pass into the .splice above
+function getIndex(str) {
+  for (let i = 0; i < str.length; i++) {
+    var index = Math.floor(Math.random() * str.length)
+  }
+  return index;
 }
 
 
