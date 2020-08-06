@@ -6,11 +6,12 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
+// Function to pull a random value from a given string
 function getRandomValue(str) {
   return str[Math.floor(Math.random() * str.length)];
 }
 function generatePassword() {
+  // character sets
   var lower = "abcdefghijklmnopqrstuvwxyz";
   var upper = lower.toUpperCase();
   var spec = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
