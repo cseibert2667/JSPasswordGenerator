@@ -1,4 +1,4 @@
-# PasswordGen-HW
+# PasswordGen
 
 Description:
 - A simple application that generates a random password based on user-selected criteria.
